@@ -17,24 +17,30 @@ Mục tiêu của dự án là cung cấp bản dịch tiếng Việt dễ đọ
 - Windows PowerShell 5.1 trở lên.
 - Quyền ghi vào thư mục cài đặt game.
 
-## Cài đặt
+## Cài đặt nhanh
 
-1. Tải repository bằng nút **Code → Download ZIP** hoặc clone bằng Git.
-2. Giải nén repository.
-3. Mở PowerShell trong thư mục repository.
-4. Chạy lệnh sau, thay đường dẫn bằng thư mục game của bạn:
+1. Nhấn **Code → Download ZIP** ở đầu trang GitHub.
+2. Giải nén file ZIP.
+3. Mở thư mục vừa giải nén và chạy `install-vietnamese.bat`.
+4. Khởi động game và chọn ngôn ngữ **Español**.
 
-   ```powershell
-   .\\scripts\\install.ps1 -GamePath "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Kingdom Rush Vengeance"
-   ```
+Script sẽ tự tìm các vị trí Steam phổ biến và tạo bản sao lưu trước khi cài đặt. Nếu không tìm thấy game, script sẽ yêu cầu bạn nhập đường dẫn thư mục game.
 
-5. Khởi động game và chọn ngôn ngữ **Español**.
+### Cài đặt bằng PowerShell
+
+Nếu muốn chỉ định đường dẫn thủ công:
+
+```powershell
+.\\scripts\\install.ps1 -GamePath "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Kingdom Rush Vengeance"
+```
 
 > Game chưa có mã ngôn ngữ `vi`, vì vậy bản Việt hóa sử dụng ô ngôn ngữ Spanish để nạp file dịch.
 
 ## Khôi phục bản gốc
 
-Script cài đặt tự tạo bản sao lưu trước khi thay đổi. Để khôi phục:
+Bạn có thể chạy `restore-original.bat` để khôi phục bằng một cú nhấp.
+
+Hoặc dùng PowerShell:
 
 ```powershell
 .\\scripts\\restore.ps1 -GamePath "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Kingdom Rush Vengeance"
@@ -57,8 +63,12 @@ Kết quả hợp lệ cần có `InvalidLines: 0`.
 ```text
 patch/
 └── Localized_sp              # File bản dịch dùng trong game
+install-vietnamese.bat        # Cài đặt nhanh bằng cách nhấp đúp
+restore-original.bat          # Khôi phục nhanh bằng cách nhấp đúp
 scripts/
+├── install-auto.ps1          # Tự tìm thư mục game
 ├── install.ps1               # Cài đặt bản Việt hóa
+├── restore-auto.ps1          # Tự tìm bản sao lưu
 ├── restore.ps1               # Khôi phục bản gốc
 └── check-localization.ps1    # Kiểm tra cấu trúc file
 ```
