@@ -82,8 +82,14 @@ Bạn có thể mở Issue hoặc Pull Request để báo lỗi dịch, đề xu
 - Ưu tiên câu dịch tự nhiên, ngắn gọn và phù hợp ngữ cảnh.
 - Kiểm tra file bằng `check-localization.ps1` trước khi gửi.
 
+## Minh bạch về AI
+
+Bản dịch ban đầu có sử dụng công cụ AI và máy dịch để hỗ trợ tạo bản nháp. Sau đó nội dung được rà soát, chỉnh thuật ngữ, sửa chính tả, sửa định dạng và kiểm tra khả năng tương thích với file ngôn ngữ của game.
+
+AI chỉ là công cụ hỗ trợ; repository không tuyên bố bản dịch là bản dịch thủ công 100%.
+
 ## Bản quyền
 
-Bản dịch và script trong repository này được phát hành theo giấy phép MIT ở mức mã nguồn đóng góp. Kingdom Rush Vengeance, executable, hình ảnh, âm thanh, font và các tài sản liên quan thuộc về Ironhide Game Studio.
+Các script và công cụ do dự án tự viết được phát hành theo giấy phép MIT. File bản dịch là nội dung phái sinh từ trò chơi và chỉ được cung cấp cho mục đích bản địa hóa cộng đồng.
 
-Repository này không nhằm thay thế việc mua hoặc sở hữu hợp pháp trò chơi.
+Kingdom Rush Vengeance, executable, hình ảnh, âm thanh, font và các tài sản liên quan thuộc về Ironhide Game Studio. Repository này không nhằm thay thế việc mua hoặc sở hữu hợp pháp trò chơi.
