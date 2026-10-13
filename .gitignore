@@ -1,0 +1,12 @@
+# Không đưa file game và tài sản bản quyền vào repository.
+*.exe
+*.dll
+*.pak
+*.assets
+*.plist
+*.png
+*.jpg
+*.jpeg
+*.ogg
+*.mp3
+fonts/
